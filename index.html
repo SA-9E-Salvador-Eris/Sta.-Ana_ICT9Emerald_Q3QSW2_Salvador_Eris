@@ -79,25 +79,29 @@
     }
 	
     function sum(){
-    var numA=document.getElementById("numA").value;
-    var numB=document.getElementById("numB").value;
-    var prod=numA + numB;
-    window.alert('a plus b equals ' + prod );
-    }    
+    var numA = parseFloat(document.getElementById("numA").value);
+    var numB = parseFloat(document.getElementById("numB").value);
+    var sum = numA + numB;
+    window.alert('a plus b equals ' + sum);
+}
 
-    function difference(){
-    var numA=document.getElementById("numA").value;
-    var numB=document.getElementById("numB").value;
-    var prod=numA - numB;
-    window.alert('a minus b equals ' + prod );
-    }    
+function difference(){
+    var numA = parseFloat(document.getElementById("numA").value);
+    var numB = parseFloat(document.getElementById("numB").value);
+    var diff = numA - numB;
+    window.alert('a minus b equals ' + diff);
+}
 
-    function quotient(){
-    var numA=document.getElementById("numA").value;
-    var numB=document.getElementById("numB").value;
-    var prod=numA / numB;
-    window.alert('a divided by b equals ' + prod );
+function quotient(){
+    var numA = parseFloat(document.getElementById("numA").value);
+    var numB = parseFloat(document.getElementById("numB").value);
+    if (numB === 0) {
+        window.alert('Cannot divide by zero!');
+    } else {
+        var quo = numA / numB;
+        window.alert('a divided by b equals ' + quo);
     }
+}
 
     function power(){
     var numA=document.getElementById("numA").value;
